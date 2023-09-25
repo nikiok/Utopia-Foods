@@ -21,8 +21,10 @@ mybatis:
     #开启驼峰命名
     map-underscore-to-camel-case: true
 
+#spring事务管理日志
 logging:
   level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
     com:
       sky:
         mapper: debug
