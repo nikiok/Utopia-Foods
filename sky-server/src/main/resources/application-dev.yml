@@ -9,6 +9,6 @@ sky:
   #aliyunOss配置
   alioss:
       endpoint: https://oss-cn-chengdu.aliyuncs.com
-      accessKeyId: LTAI5tNpQXougajoA9oXm1rg
-      accessKeySecret: SG4Z7bH59qgWNWQF9D8PagBtUD4VxE
-      bucketName: niki-springweb
+      accessKeyId:  xxxxxxxxxxxxx
+      accessKeySecret: xxxxxxxxxxxxx
+      bucketName:   xxxxxxxxxx
