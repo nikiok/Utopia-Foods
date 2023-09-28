@@ -1,8 +1,6 @@
 server:
   port: 8080
 
-
-
 spring:
   profiles:
     active: dev
@@ -48,11 +46,15 @@ logging:
 sky:
   jwt:
     # 设置jwt签名加密时使用的秘钥
-    admin-secret-key: itcast
+    admin-secret-key: admin
     # 设置jwt过期时间
     admin-ttl: 7200000
+
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: user
+    user-ttl: 7200000
+    user-token-name: authentication
 
   #aliyunOss配置
   alioss:
@@ -60,4 +62,7 @@ sky:
     accessKeyId: ${sky.alioss.accessKeyId}
     accessKeySecret: ${sky.alioss.accessKeySecret}
     bucketName: ${sky.alioss.bucketName}
-
+  # 微信相关配置
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
