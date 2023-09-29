@@ -1,6 +1,10 @@
 package com.sky.service;
 
+import com.sky.dto.SetmealDTO;
+import com.sky.dto.SetmealPageQueryDTO;
 import com.sky.entity.Setmeal;
+import com.sky.entity.SetmealDish;
+import com.sky.result.PageResult;
 import com.sky.vo.DishItemVO;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +22,13 @@ import java.util.List;
 
 @Service
 public interface SetmealService {
+
+	/**
+	 * 分页查询
+	 * @param setmealPageQueryDTO
+	 * @return
+	 */
+	PageResult pageQuery(SetmealPageQueryDTO setmealPageQueryDTO);
 	 /**
 	  * 菜品起售停售
 	  * @param status
@@ -38,4 +49,23 @@ public interface SetmealService {
 	 * @return
 	 */
 	List<DishItemVO> getDishItemById(Long id);
+
+	/**
+	 * 新增套餐
+	 * @param setmealDTO
+	 */
+	void saveWithDish(SetmealDTO setmealDTO);
+
+	/**
+	 * 批量删除套餐
+	 * @param ids
+	 */
+	void deleteBatch(List<Long> ids);
+
+	/**
+	 * 修改套餐
+	 * @param setmealDTO
+	 */
+	void update(SetmealDTO setmealDTO);
+
 }

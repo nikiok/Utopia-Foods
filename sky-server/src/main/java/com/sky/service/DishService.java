@@ -21,6 +21,17 @@ import java.util.List;
  */
 @Service
 public interface DishService {
+	/**
+	 * 根据分类id查询菜品
+	 * @param categoryId
+	 * @return
+	 */
+	List<Dish> list(Long categoryId);
+	/**
+	 * 菜品分页查询
+	 * @param dishPageQueryDTO
+	 * @return
+	 */
 	PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
 	void startOrStop(Integer status,Long id);
 

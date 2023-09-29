@@ -10,7 +10,7 @@
                 and d.name like concat('%',#{name},'%')
             </if>
             <if test="categoryId != null">
-                and d.categoryId = #{categoryId}
+                and d.category_id = #{categoryId}
             </if>
             <if test="status != null">
                 and d.status = #{status}
@@ -32,8 +32,8 @@
             <if test="name != null">
                 name = #{name},
             </if>
-            <if test="category_id != null">
-                categoryId = #{categoryId},
+            <if test="categoryId != null">
+                category_id = #{categoryId},
             </if>
             <if test="price != null">
                 price = #{price},
@@ -60,6 +60,9 @@
     <select id="list" resultType="Dish">
         SELECT * from dish
         <where>
+            <if test="name != null">
+                and name like concat('%',#{name},'%')
+            </if>
             <if test="categoryId != null">
                 and category_id = #{categoryId}
             </if>

@@ -34,6 +34,15 @@ public class DishServiceImpl implements DishService {
 	private SetmealMapper setmealMapper;
 
 	@Override
+	public List<Dish> list(Long categoryId) {
+		Dish dish = Dish.builder()
+				.categoryId(categoryId)
+				.status(StatusConstant.ENABLE)
+				.build();
+		return dishMapper.list(dish);
+	}
+
+	@Override
 	public PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO) {
 		PageHelper.startPage(dishPageQueryDTO.getPage(), dishPageQueryDTO.getPageSize());
 		Page<DishVO> page = dishMapper.pageQuery(dishPageQueryDTO);
