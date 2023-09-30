@@ -8,7 +8,6 @@ import com.sky.result.Result;
 import com.sky.service.UserService;
 import com.sky.utils.JwtUtil;
 import com.sky.vo.UserLoginVO;
-import com.sky.vo.UserReportVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -50,7 +49,7 @@ public class UserController {
 	@PostMapping("/login")
 	@ApiOperation("微信登录")
 	public Result<UserLoginVO> login(@RequestBody UserLoginDTO userLoginDTO){
-		log.info("微信用户登录：{}",userLoginDTO);
+		log.info("微信用户登录：{}",userLoginDTO.getCode());
 		//创建要登陆的用户
 		User user = userService.wechatLogin(userLoginDTO);
 

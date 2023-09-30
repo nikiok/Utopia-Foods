@@ -10,10 +10,10 @@ import com.sky.mapper.UserMapper;
 import com.sky.properties.WeChatProperties;
 import com.sky.service.UserService;
 import com.sky.utils.HttpClientUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.net.http.HttpClient;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +27,7 @@ import java.util.Map;
  * @version: $
  * -----------------------------------------------
  */
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -37,7 +38,8 @@ public class UserServiceImpl implements UserService {
 	private WeChatProperties weChatProperties;
 	@Autowired
 	private UserMapper userMapper;
-	@Override
+
+
 	public User wechatLogin(UserLoginDTO userLoginDTO) {
 		// 获取用户的openid
 		String openid = getOpenid(userLoginDTO.getCode());

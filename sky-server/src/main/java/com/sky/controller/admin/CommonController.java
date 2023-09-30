@@ -49,6 +49,7 @@ public class CommonController {
 			String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
 			// 构造新文件名
 			String objectName = UUID.randomUUID().toString() + extension;
+			log.info("新文件名:{}",objectName);
 			// 文件请求路径
 			String filePath = aliOssUtil.upload(file.getBytes(),objectName);
 			return Result.success(filePath);

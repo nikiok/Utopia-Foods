@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 @Mapper
 public interface UserMapper {
 
+	@Select("select * from user where  id = #{userId}}")
+	User getById(Long userId);
+
 	@Select("select * from user where openid = #{openid}")
 	User getByOpenid(String openid);
 

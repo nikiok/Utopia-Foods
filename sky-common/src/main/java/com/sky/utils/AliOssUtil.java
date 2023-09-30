@@ -4,6 +4,7 @@ import com.aliyun.oss.ClientException;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.OSSException;
+import com.aliyun.oss.model.Callback;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ public class AliOssUtil {
     private String accessKeyId;
     private String accessKeySecret;
     private String bucketName;
+
 
     /**
      * 文件上传
@@ -66,3 +68,11 @@ public class AliOssUtil {
         return stringBuilder.toString();
     }
 }
+
+// https://sky-itcast.oss-cn-beijing.aliyuncs.com/16d0a3d6-2253-4cfc-9b49-bf7bd9eb2ad2.png
+
+// https://niki-springweb.oss-cn-chengdu.aliyuncs.com/28cbad57-6759-4012-bc43-62720d86f54b.png
+
+// https://niki-springweb.oss-cn-chengdu.aliyuncs.com/3afb4867-5644-4400-87ba-c1e00e93cbe6.png
+
+//https://niki-springweb.oss-cn-chengdu.aliyuncs.com/50b84c48-379f-4528-a0b4-2d07a2651d9b.png
