@@ -214,7 +214,7 @@ public class OrderServiceImpl implements OrderService {
 //                "乌托邦外卖订单", //商品描述
 //                user.getOpenid() //微信用户的openid
 //        );
-
+        // 生成空Json,跳过微信支付流程
         JSONObject jsonObject =new JSONObject();
         if (jsonObject.getString("code") != null && jsonObject.getString("code").equals("ORDERPAID")) {
             throw new OrderBusinessException("该订单已支付");
@@ -495,13 +495,13 @@ public class OrderServiceImpl implements OrderService {
         //支付状态
         Integer payStatus = ordersDB.getPayStatus();
         if (payStatus == Orders.PAID) {
-            //用户已支付，需要退款
-            String refund = weChatPayUtil.refund(
-                    ordersDB.getNumber(),
-                    ordersDB.getNumber(),
-                    new BigDecimal(0.01),
-                    new BigDecimal(0.01));
-            log.info("申请退款：{}", refund);
+//            //用户已支付，需要退款
+//            String refund = weChatPayUtil.refund(
+//                    ordersDB.getNumber(),
+//                    ordersDB.getNumber(),
+//                    new BigDecimal(0.01),
+//                    new BigDecimal(0.01));
+            log.info("申请退款：{}", ordersDB);
         }
 
         // 拒单需要退款，根据订单id更新订单状态、拒单原因、取消时间
