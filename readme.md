@@ -22,7 +22,7 @@
 
 + 功能架构
 
-  ![](C:\Users\niki0\Pictures\model.png)
+ <img src="imgs/model.png" alt="imgs/model.png" style="zoom:67%;" />
 
 + 角色说明
 
@@ -34,7 +34,7 @@
 
   数据见sql文件。
 
-  ![image-20231012171533683](C:\Users\niki0\Pictures\DataBases.png)
+ <img src="imgs/DataBase.png" alt="imgs/DataBase.png" style="zoom:67%;" />
 
 ​	包括用户地址表、菜单表、菜品表、菜品口味表、员工表、点餐详情表、点餐下单表、套餐表、套餐详情表、购物车表、用户（消费者表）等等。
 
@@ -43,11 +43,11 @@
 
 + 登录流程
 
-![](C:\Users\niki0\Pictures\login.png)
+ <img src="imgs/login.png" alt="imgs/login.png" style="zoom:67%;" />
 
 + 微信支付流程
-
-  ![微信login流程](E:\桌面\微信login流程.png)
+  
+ <img src="imgs/WechatLogin.png" alt="imgs/WechatLogin.png" style="zoom:67%;" />
 
 ## 2.目录说明
 
