@@ -8,7 +8,7 @@
 
 + 技术栈
 
-![](C:\Users\niki0\Pictures\Service.png)
+<img src="imgs/Service.png" alt="imgs/Service.png" style="zoom:67%;" />
 
 **1). 用户层**  本项目中在构建系统管理后台的前端页面，我们会用到H5、Vue.js、ElementUI、apache echarts(展示图表)等技术。而在构建移动端应用时，我们会使用到微信小程序。 
 
