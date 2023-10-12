@@ -34,7 +34,7 @@
 
   数据见sql文件。
 
- <img src="imgs/DataBase.png" alt="imgs/DataBase.png" style="zoom:67%;" />
+ <img src="imgs/DataBases.png" alt="imgs/DataBases.png" style="zoom:67%;" />
 
 ​	包括用户地址表、菜单表、菜品表、菜品口味表、员工表、点餐详情表、点餐下单表、套餐表、套餐详情表、购物车表、用户（消费者表）等等。
 
